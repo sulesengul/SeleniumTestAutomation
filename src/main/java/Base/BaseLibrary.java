@@ -1,6 +1,9 @@
 package Base;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -19,5 +22,14 @@ public class BaseLibrary extends Data {
     public void switchTab (int index) {
         List<String> tabs = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(tabs.get(index));
+    }
+
+    public boolean isElementDisplay(By elements) {
+        try{
+            return driver.findElement(elements).isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
+
     }
 }

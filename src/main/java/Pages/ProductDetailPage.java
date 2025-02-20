@@ -7,8 +7,9 @@ public class ProductDetailPage extends BaseTest {
 
     public ProductDetailPage favoriteButtonClick() {
 
-        if (!driver.findElement(By.cssSelector("[class='i-heart-orange']")).isDisplayed())
-            driver.findElement(By.cssSelector("[class='product-container] [class='i-heart']")).click();
+        By favoriteButton = By.cssSelector("[class='i-heart-orange']");
+        if (!isElementDisplay(favoriteButton))
+            driver.findElement(By.cssSelector("[class='product-container'] [class='i-heart']")).click();
         return this;
     }
 
