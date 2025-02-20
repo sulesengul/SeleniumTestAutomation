@@ -15,7 +15,7 @@ public class UserTest extends BaseTest {
     MainPage mainPage = new MainPage();
 
 
-    @Test
+    @Test(description = "Başarılı Kullanıcı Girişi")
     public void loginSuccessful() {
         loginPage.fillEmail(email)
                 .fillPassword(password)
@@ -27,7 +27,7 @@ public class UserTest extends BaseTest {
 
 
 
-    @Test
+    @Test(description = "Başarısız Kullanıcı Girişi")
     public void loginUnsuccessful() {
 
         loginPage.fillEmail(email)

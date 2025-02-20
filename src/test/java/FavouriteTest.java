@@ -12,7 +12,7 @@ public class FavouriteTest extends BaseTest {
     ProductListPage productListPage = new ProductListPage();
     ProductDetailPage productDetailPage = new ProductDetailPage();
 
-    @Test
+    @Test(description = "Ürün Detay Favoriler Kontrol")
     public void favouriteTest() {
         loginPage.fillEmail(email)
                 .fillPassword(password)
